@@ -10,7 +10,7 @@ import java.util.List;
 
 public class Main {
     
-    private static final int[] SIZES = {10_000, 50_000, 100_000};
+    private static final int[] SIZES = {10_000, 100_000, 1_000_000};
     
     public static void main(String[] args) {
         System.out.println("=== OLIMPIADAS DE LA ORDENACIÓN ===");
@@ -26,9 +26,9 @@ public class Main {
             System.out.println(result);
         }
         
-        BenchmarkResult bubbleRandom = findResult(results, "Bubble Sort", 100_000, "Aleatorio");
-        BenchmarkResult quickRandom = findResult(results, "Quick Sort (Random)", 100_000, "Aleatorio");
-        BenchmarkResult mergeRandom = findResult(results, "Merge Sort", 100_000, "Aleatorio");
+        BenchmarkResult bubbleRandom = findResult(results, "Bubble Sort", 1_000_000, "Aleatorio");
+        BenchmarkResult quickRandom = findResult(results, "Quick Sort (Random)", 1_000_000, "Aleatorio");
+        BenchmarkResult mergeRandom = findResult(results, "Merge Sort", 1_000_000, "Aleatorio");
         
         String co2Report = CO2Calculator.generateCO2Report(
             bubbleRandom.getAverageTimeMs(),
@@ -69,8 +69,8 @@ public class Main {
         report.append("**Entorno:** Java con System.nanoTime()\n\n");
         
         report.append("### Tabla de Resultados (Tiempo promedio en ms)\n\n");
-        report.append("| Algoritmo | n=10,000 | n=50,000 | n=100,000 | Altura (h) |\n");
-        report.append("|-----------|----------|----------|-----------|------------|\n");
+        report.append("| Algoritmo | n=10,000 | n=100,000 | n=1,000,000 | Altura (h) |\n");
+        report.append("|-----------|----------|-----------|-------------|------------|\n");
         
         String[] algorithms = {"Bubble Sort", "Merge Sort", "Quick Sort (Random)", "Quick Sort (First)"};
         String[] dataTypes = {"Aleatorio", "Ordenado", "Inverso"};
