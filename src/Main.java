@@ -91,7 +91,7 @@ public class Main {
 
     // prueba bubble sort y retorna el resultado como string
     static String probarBubbleSort(int[] arr, String tipo, int n) {
-        int repeticiones = 3;
+        int repeticiones = 10;
         long total = 0;
 
         for (int i = 0; i < repeticiones; i++) {
@@ -110,7 +110,7 @@ public class Main {
 
     // prueba merge sort y retorna el resultado como string
     static String probarMergeSort(int[] arr, String tipo, int n) {
-        int repeticiones = 3;
+        int repeticiones = 10;
         long total = 0;
         int altura = 0;
 
@@ -131,7 +131,7 @@ public class Main {
 
     // prueba quick sort con pivote aleatorio
     static String probarQuickRandom(int[] arr, String tipo, int n) {
-        int repeticiones = 3;
+        int repeticiones = 10;
         long total = 0;
         int altura = 0;
 
@@ -152,7 +152,7 @@ public class Main {
 
     // prueba quick sort con primer elemento como pivote
     static String probarQuickFirst(int[] arr, String tipo, int n) {
-        int repeticiones = 3;
+        int repeticiones = 10;
         long total = 0;
         int altura = 0;
         boolean stackOverflow = false;
